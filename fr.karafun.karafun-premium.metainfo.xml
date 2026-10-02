@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>fr.karafun.desktop.premium</id>
-  <launchable type="desktop-id">fr.karafun.desktop.premium.desktop</launchable>
+  <id>fr.karafun.karafun-premium</id>
+  <launchable type="desktop-id">fr.karafun.karafun-premium.desktop</launchable>
 
-  <name>KaraFun</name>
+  <name>KaraFun Premium</name>
   <summary>Your best karaoke experience</summary>
   <summary xml:lang="de">Ihr bestes Karaoke-Erlebnis</summary>
   <summary xml:lang="de_CH">Ihr bestes Karaoke-Erlebnis</summary>
@@ -105,7 +105,10 @@
   <url type="homepage">https://www.karafun.com/</url>
   <url type="help">https://www.karafun.com/help</url>
 
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.0">
+    <content_attribute id="money-purchasing">mild</content_attribute>
+  </content_rating>
+
 
   <releases>
     <release version="3.13.0" date="2026-10-02" />
