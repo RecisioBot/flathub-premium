@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=KaraFun
+Comment=Your karaoke party, easy!
+Exec=karafun %U
+Icon=fr.karafun.desktop.premium
+Terminal=false
+Categories=AudioVideo;Audio;Video;Game;
+MimeType=x-scheme-handler/karafun;
+StartupWMClass=KaraFun
