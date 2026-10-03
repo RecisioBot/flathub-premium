@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>fr.karafun.karafun-premium</id>
-  <launchable type="desktop-id">fr.karafun.karafun-premium.desktop</launchable>
+  <id>com.recisio.karafun-premium</id>
+  <launchable type="desktop-id">com.recisio.karafun-premium.desktop</launchable>
 
   <name>KaraFun Premium</name>
   <summary>Your best karaoke experience</summary>
@@ -106,12 +106,13 @@
   <url type="help">https://www.karafun.com/help</url>
 
   <content_rating type="oars-1.0">
+    <content_attribute id="social-info">intense</content_attribute>
+    <content_attribute id="social-contacts">intense</content_attribute>
     <content_attribute id="money-purchasing">mild</content_attribute>
   </content_rating>
 
-
   <releases>
-    <release version="3.13.0" date="2026-10-02" />
+    <release version="3.13.0" date="2026-10-03" />
   </releases>
 
   <branding>

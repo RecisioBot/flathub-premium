@@ -1,4 +1,4 @@
-id: fr.karafun.karafun-premium
+id: com.recisio.karafun-premium
 runtime: org.freedesktop.Platform
 runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
@@ -20,15 +20,15 @@ modules:
     build-commands:
       - cp -a main /app/main
       - install -Dm755 karafun.sh /app/bin/karafun
-      - install -Dm644 fr.karafun.karafun-premium.desktop -t /app/share/applications
-      - install -Dm644 fr.karafun.karafun-premium.metainfo.xml -t /app/share/metainfo
-      - install -Dm644 karafun-128.png /app/share/icons/hicolor/128x128/apps/fr.karafun.karafun-premium.png
-      - install -Dm644 karafun-256.png /app/share/icons/hicolor/256x256/apps/fr.karafun.karafun-premium.png
-      - install -Dm644 karafun-512.png /app/share/icons/hicolor/512x512/apps/fr.karafun.karafun-premium.png
+      - install -Dm644 com.recisio.karafun-premium.desktop -t /app/share/applications
+      - install -Dm644 com.recisio.karafun-premium.metainfo.xml -t /app/share/metainfo
+      - install -Dm644 karafun-128.png /app/share/icons/hicolor/128x128/apps/com.recisio.karafun-premium.png
+      - install -Dm644 karafun-256.png /app/share/icons/hicolor/256x256/apps/com.recisio.karafun-premium.png
+      - install -Dm644 karafun-512.png /app/share/icons/hicolor/512x512/apps/com.recisio.karafun-premium.png
     sources:
       - type: archive
         url: https://s3.billos.fr/karafun-desktop/KaraFun-linux-x64-3.13.0.zip
-        sha256: 90d40a50e2a0e1f2263f55c398f8ebd1c35c3ab33f2be7d0543a0e68b14066ae
+        sha256: 4947c76eb6c5d5bad8764d7fdc242a4bfa3d6b86fae646b80403fa226847addb
         dest: main
         only-arches: [x86_64]
       - type: script
@@ -36,9 +36,9 @@ modules:
         commands:
           - exec zypak-wrapper /app/main/KaraFun "$@"
       - type: file
-        path: fr.karafun.karafun-premium.desktop
+        path: com.recisio.karafun-premium.desktop
       - type: file
-        path: fr.karafun.karafun-premium.metainfo.xml
+        path: com.recisio.karafun-premium.metainfo.xml
       - type: file
         path: karafun-128.png
       - type: file
