@@ -19,22 +19,18 @@ modules:
     build-commands:
       - cp -a main /app/main
       - install -Dm755 karafun.sh /app/bin/karafun
-      - install -Dm644 com.recisio.karafun-premium.desktop -t /app/share/applications
-      - install -Dm644 com.recisio.karafun-premium.metainfo.xml -t /app/share/metainfo
+      - install -Dm644 main/resources/com.recisio.karafun-premium.desktop -t /app/share/applications
+      - install -Dm644 main/resources/com.recisio.karafun-premium.metainfo.xml -t /app/share/metainfo
       - install -Dm644 main/resources/karafun-128.png /app/share/icons/hicolor/128x128/apps/com.recisio.karafun-premium.png
       - install -Dm644 main/resources/karafun-256.png /app/share/icons/hicolor/256x256/apps/com.recisio.karafun-premium.png
       - install -Dm644 main/resources/karafun-512.png /app/share/icons/hicolor/512x512/apps/com.recisio.karafun-premium.png
     sources:
       - type: archive
         url: https://s3.billos.fr/karafun-desktop/KaraFun-linux-x64-3.13.0.zip
-        sha256: 6bb8e8f6c98a372d5111e8eb09f1821ec27666d9b9e9d9c6b15d37702893cf0e
+        sha256: 14bbeb092bf9778fea44e1f4bab6fec0564868d70587229c1e84355b6acd6c64
         dest: main
         only-arches: [x86_64]
       - type: script
         dest-filename: karafun.sh
         commands:
           - exec zypak-wrapper /app/main/KaraFun "$@"
-      - type: file
-        path: com.recisio.karafun-premium.desktop
-      - type: file
-        path: com.recisio.karafun-premium.metainfo.xml
