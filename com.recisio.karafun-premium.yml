@@ -1,9 +1,9 @@
 id: com.recisio.karafun-premium
 runtime: org.freedesktop.Platform
-runtime-version: '26.08'
+runtime-version: "26.08"
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: '26.08'
+base-version: "26.08"
 command: karafun
 separate-locales: false
 finish-args:
@@ -13,7 +13,6 @@ finish-args:
   - --device=dri
   - --socket=pulseaudio
   - --share=network
-  - --talk-name=org.freedesktop.Notifications
 modules:
   - name: karafun
     buildsystem: simple
@@ -22,13 +21,13 @@ modules:
       - install -Dm755 karafun.sh /app/bin/karafun
       - install -Dm644 com.recisio.karafun-premium.desktop -t /app/share/applications
       - install -Dm644 com.recisio.karafun-premium.metainfo.xml -t /app/share/metainfo
-      - install -Dm644 karafun-128.png /app/share/icons/hicolor/128x128/apps/com.recisio.karafun-premium.png
-      - install -Dm644 karafun-256.png /app/share/icons/hicolor/256x256/apps/com.recisio.karafun-premium.png
-      - install -Dm644 karafun-512.png /app/share/icons/hicolor/512x512/apps/com.recisio.karafun-premium.png
+      - install -Dm644 main/resources/karafun-128.png /app/share/icons/hicolor/128x128/apps/com.recisio.karafun-premium.png
+      - install -Dm644 main/resources/karafun-256.png /app/share/icons/hicolor/256x256/apps/com.recisio.karafun-premium.png
+      - install -Dm644 main/resources/karafun-512.png /app/share/icons/hicolor/512x512/apps/com.recisio.karafun-premium.png
     sources:
       - type: archive
         url: https://s3.billos.fr/karafun-desktop/KaraFun-linux-x64-3.13.0.zip
-        sha256: 4947c76eb6c5d5bad8764d7fdc242a4bfa3d6b86fae646b80403fa226847addb
+        sha256: 6bb8e8f6c98a372d5111e8eb09f1821ec27666d9b9e9d9c6b15d37702893cf0e
         dest: main
         only-arches: [x86_64]
       - type: script
@@ -39,9 +38,3 @@ modules:
         path: com.recisio.karafun-premium.desktop
       - type: file
         path: com.recisio.karafun-premium.metainfo.xml
-      - type: file
-        path: karafun-128.png
-      - type: file
-        path: karafun-256.png
-      - type: file
-        path: karafun-512.png
